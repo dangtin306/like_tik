@@ -1,46 +1,24 @@
 package com.like.like_tik
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.like.like_tik.ui.theme.Like_tikTheme
 
-class MainActivity : ComponentActivity() {
+class MainActivity  : ComponentActivity() {
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Like_tikTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
-            }
-        }
-    }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        val webView = WebView(this)
+        setContentView(webView)
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Like_tikTheme {
-        Greeting("Android")
+        // Cho phép JavaScript để web Google hiển thị đúng
+        webView.settings.javaScriptEnabled = true
+        webView.webViewClient = WebViewClient()
+
+        // Mở trang Google
+        webView.loadUrl("https://www.google.com")
     }
 }
