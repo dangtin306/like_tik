@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.like.like_tik"
-        minSdk = 30
+        minSdk = 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
