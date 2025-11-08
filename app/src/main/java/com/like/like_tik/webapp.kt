@@ -14,7 +14,7 @@ class WebApp(context: Context, private val url: String) : WebView(context) {
             override fun shouldOverrideUrlLoading(view: WebView?, request: android.webkit.WebResourceRequest?): Boolean {
                 val targetUrl = request?.url.toString()
 
-                return if (targetUrl.contains("liketik")) {
+                return if (targetUrl.contains("liketik") || targetUrl.contains("itok") ) {
                     // Nếu URL chứa "liketik", load trong WebView
                     false
                 } else {

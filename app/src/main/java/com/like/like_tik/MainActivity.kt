@@ -30,7 +30,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         // Tạo WebView hiển thị web
-        val webView = WebApp(this, "https://liketik.vn")
+        val webView = WebApp(this, "https://itok.pro")
 
         // Nút thanh toán Google Pay (ẩn ban đầu)
         val payButton = Button(this).apply {
