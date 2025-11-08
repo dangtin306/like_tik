@@ -15,7 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Like_tik"
         tools:targetApi="31">
+        <activity android:name=".GooglePayActivity" />
 
+        <!--        <activity-->
+<!--            android:name=".GooglePayActivity"-->
+<!--            android:exported="true"-->
+<!--            android:label="Google Pay Demo" />-->
         <!-- Chỉ cần WebViewActivity thôi -->
         <activity
             android:name=".MainActivity"
