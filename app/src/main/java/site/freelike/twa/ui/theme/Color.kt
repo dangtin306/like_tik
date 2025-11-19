@@ -1,4 +1,4 @@
-package com.like.like_tik.ui.theme
+package com.like.twa.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

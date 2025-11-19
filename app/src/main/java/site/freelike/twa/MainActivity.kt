@@ -1,4 +1,4 @@
-package com.like.like_tik
+package site.freelike.twa
 
 import android.content.Intent
 import android.os.Bundle

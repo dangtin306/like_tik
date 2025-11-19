@@ -1,4 +1,4 @@
-package com.like.like_tik
+package com.like.twa
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
