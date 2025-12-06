@@ -1,3 +1,4 @@
+
 package site.freelike.twa
 
 import android.content.Intent
@@ -27,7 +28,6 @@ class MainActivity : ComponentActivity() {
 
         webApp.setPayButton(payButton)
 
-        // ✅ Khi kéo xuống, load lại URL đang lưu trong file con
         val swipeRefresh = SwipeRefreshLayout(this).apply {
             addView(webApp)
             setOnRefreshListener {
@@ -50,5 +50,9 @@ class MainActivity : ComponentActivity() {
         layout.addView(payButton, params)
 
         setContentView(layout)
+
+        // 🔥 kiểm tra giá trị đã lưu
+        val demo = Storage.get(this, "demo_value", "chưa có")
+        println("🔥 TEST LOG: demo_value = $demo")
     }
 }
